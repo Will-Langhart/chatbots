@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+  background-color: #f9f9f9;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+pre.code-block {
+  background: #eee;
+  padding: 10px;
+  border: 1px solid #ccc;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  margin-top: 10px;
+}
+
+hr {
+  margin: 40px 0;
+}
+
+ul {
+  margin-left: 20px;
+}
+
+.architecture-section {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.toggle-btn {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #ddd;
+  border: none;
+  border-radius: 3px;
+}
+
+.toggle-btn:hover {
+  background-color: #ccc;
+}
