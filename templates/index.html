@@ -22,6 +22,16 @@
         <li><a href="#arch8">Architecture 8</a></li>
         <li><a href="#arch9">Architecture 9</a></li>
         <li><a href="#arch10">Architecture 10</a></li>
+        <li><a href="#arch11">Architecture 11</a></li>
+        <li><a href="#arch12">Architecture 12</a></li>
+        <li><a href="#arch13">Architecture 13</a></li>
+        <li><a href="#arch14">Architecture 14</a></li>
+        <li><a href="#arch15">Architecture 15</a></li>
+        <li><a href="#arch16">Architecture 16</a></li>
+        <li><a href="#arch17">Architecture 17</a></li>
+        <li><a href="#arch18">Architecture 18</a></li>
+        <li><a href="#arch19">Architecture 19</a></li>
+        <li><a href="#arch20">Architecture 20</a></li>
       </ul>
     </nav>
     <button id="toggle-all">Toggle All Code</button>
@@ -424,6 +434,371 @@ async_rag/
         <li>Uses Celery to handle asynchronous task processing.</li>
         <li>Efficiently manages long-running tasks (e.g., complex query processing, background vector updates).</li>
         <li>Optimizes system responsiveness for high-load enterprise applications.</li>
+      </ul>
+    </section>
+    
+    <!-- Additional 10 Architectures -->
+    <hr>
+    
+    <!-- Architecture 11 -->
+    <section id="arch11" class="architecture-section">
+      <h2>Architecture 11: OpenAI + HuggingFace Transformers + Pinecone (Alternative RAG)</h2>
+      <button class="toggle-btn">Hide Code</button>
+      <div class="code-block-container">
+        <pre class="code-block">
+alt_rag/
+├── templates/
+│   └── index.html
+├── static/
+│   ├── css/
+│   │   └── main.css
+│   └── js/
+│       └── main.js
+├── models/
+│   ├── chat_history.py
+│   ├── pinecone.py
+│   ├── openai_api.py
+│   ├── huggingface_api.py
+│   └── vector_store.py
+├── routes/
+│   ├── api.py
+│   └── chatbot.py
+├── app.py
+└── requirements.txt
+        </pre>
+      </div>
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li>Uses HuggingFace Transformers as an alternative to OpenAI for text generation.</li>
+        <li>Integrates with Pinecone for vector storage and retrieval.</li>
+      </ul>
+    </section>
+    
+    <hr>
+    
+    <!-- Architecture 12 -->
+    <section id="arch12" class="architecture-section">
+      <h2>Architecture 12: OpenAI + Redis Cache + LangChain + Pinecone (Hybrid Caching RAG)</h2>
+      <button class="toggle-btn">Hide Code</button>
+      <div class="code-block-container">
+        <pre class="code-block">
+hybrid_cache_rag/
+├── templates/
+│   └── index.html
+├── static/
+│   ├── css/
+│   │   └── main.css
+│   └── js/
+│       └── main.js
+├── models/
+│   ├── chat_history.py
+│   ├── redis_cache.py
+│   ├── pinecone.py
+│   ├── langchain_pipeline.py
+│   └── openai_api.py
+├── routes/
+│   ├── api.py
+│   └── chatbot.py
+├── app.py
+└── requirements.txt
+        </pre>
+      </div>
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li>Combines caching via Redis with LangChain for enhanced conversation chaining.</li>
+        <li>Provides a hybrid RAG pipeline optimized for performance.</li>
+      </ul>
+    </section>
+    
+    <hr>
+    
+    <!-- Architecture 13 -->
+    <section id="arch13" class="architecture-section">
+      <h2>Architecture 13: OpenAI + Custom ML Model + Pinecone (Custom RAG)</h2>
+      <button class="toggle-btn">Hide Code</button>
+      <div class="code-block-container">
+        <pre class="code-block">
+custom_rag/
+├── templates/
+│   └── index.html
+├── static/
+│   ├── css/
+│   │   └── main.css
+│   └── js/
+│       └── main.js
+├── models/
+│   ├── chat_history.py
+│   ├── pinecone.py
+│   ├── custom_ml_model.py
+│   └── openai_api.py
+├── routes/
+│   ├── api.py
+│   └── chatbot.py
+├── app.py
+└── requirements.txt
+        </pre>
+      </div>
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li>Integrates a custom ML model for domain-specific tasks alongside OpenAI completions.</li>
+        <li>Utilizes Pinecone for vector search and storage.</li>
+      </ul>
+    </section>
+    
+    <hr>
+    
+    <!-- Architecture 14 -->
+    <section id="arch14" class="architecture-section">
+      <h2>Architecture 14: OpenAI + Vector Search + Document QA (RAG + QA)</h2>
+      <button class="toggle-btn">Hide Code</button>
+      <div class="code-block-container">
+        <pre class="code-block">
+qa_rag/
+├── templates/
+│   └── index.html
+├── static/
+│   ├── css/
+│   │   └── main.css
+│   └── js/
+│       └── main.js
+├── models/
+│   ├── chat_history.py
+│   ├── vector_store.py
+│   ├── openai_api.py
+│   └── qa_engine.py
+├── routes/
+│   ├── api.py
+│   └── chatbot.py
+├── app.py
+└── requirements.txt
+        </pre>
+      </div>
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li>Adds document-based question answering capabilities to the RAG pipeline.</li>
+        <li>Leverages OpenAI for text generation and vector search for data retrieval.</li>
+      </ul>
+    </section>
+    
+    <hr>
+    
+    <!-- Architecture 15 -->
+    <section id="arch15" class="architecture-section">
+      <h2>Architecture 15: Multi-Language RAG with OpenAI and DeepL Integration</h2>
+      <button class="toggle-btn">Hide Code</button>
+      <div class="code-block-container">
+        <pre class="code-block">
+multilang_rag/
+├── templates/
+│   └── index.html
+├── static/
+│   ├── css/
+│   │   └── main.css
+│   └── js/
+│       └── main.js
+├── models/
+│   ├── chat_history.py
+│   ├── pinecone.py
+│   ├── openai_api.py
+│   ├── deepl_api.py
+│   └── vector_store.py
+├── routes/
+│   ├── api.py
+│   └── chatbot.py
+├── app.py
+└── requirements.txt
+        </pre>
+      </div>
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li>Supports multi-language processing by integrating DeepL for translation.</li>
+        <li>Combines OpenAI and Pinecone for an international RAG pipeline.</li>
+      </ul>
+    </section>
+    
+    <hr>
+    
+    <!-- Architecture 16 -->
+    <section id="arch16" class="architecture-section">
+      <h2>Architecture 16: OpenAI + LangChain + Custom Retrieval + Pinecone (Smart RAG)</h2>
+      <button class="toggle-btn">Hide Code</button>
+      <div class="code-block-container">
+        <pre class="code-block">
+smart_rag/
+├── templates/
+│   └── index.html
+├── static/
+│   ├── css/
+│   │   └── main.css
+│   └── js/
+│       └── main.js
+├── models/
+│   ├── chat_history.py
+│   ├── pinecone.py
+│   ├── custom_retrieval.py
+│   ├── langchain_pipeline.py
+│   └── openai_api.py
+├── routes/
+│   ├── api.py
+│   └── chatbot.py
+├── app.py
+└── requirements.txt
+        </pre>
+      </div>
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li>Incorporates custom retrieval logic with LangChain and Pinecone.</li>
+        <li>Enhances conversational search with smart, domain-specific data retrieval.</li>
+      </ul>
+    </section>
+    
+    <hr>
+    
+    <!-- Architecture 17 -->
+    <section id="arch17" class="architecture-section">
+      <h2>Architecture 17: Enterprise RAG with Docker &amp; Kubernetes Integration</h2>
+      <button class="toggle-btn">Hide Code</button>
+      <div class="code-block-container">
+        <pre class="code-block">
+enterprise_rag_docker/
+├── docker/
+│   ├── Dockerfile
+│   └── docker-compose.yml
+├── templates/
+│   └── index.html
+├── static/
+│   ├── css/
+│   │   └── main.css
+│   └── js/
+│       └── main.js
+├── models/
+│   ├── chat_history.py
+│   ├── pinecone.py
+│   ├── openai_api.py
+│   └── sql_database.py
+├── routes/
+│   ├── api.py
+│   ├── chatbot.py
+│   └── analytics.py
+├── app.py
+└── requirements.txt
+        </pre>
+      </div>
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li>Enterprise-level RAG pipeline deployed via Docker and orchestrated with Kubernetes.</li>
+        <li>Includes SQL-based data retrieval and analytics for monitoring.</li>
+      </ul>
+    </section>
+    
+    <hr>
+    
+    <!-- Architecture 18 -->
+    <section id="arch18" class="architecture-section">
+      <h2>Architecture 18: OpenAI + AWS S3 + Pinecone for Data-Driven RAG</h2>
+      <button class="toggle-btn">Hide Code</button>
+      <div class="code-block-container">
+        <pre class="code-block">
+aws_rag/
+├── templates/
+│   └── index.html
+├── static/
+│   ├── css/
+│   │   └── main.css
+│   └── js/
+│       └── main.js
+├── models/
+│   ├── chat_history.py
+│   ├── pinecone.py
+│   ├── openai_api.py
+│   ├── s3_handler.py
+│   └── vector_store.py
+├── routes/
+│   ├── api.py
+│   └── chatbot.py
+├── app.py
+└── requirements.txt
+        </pre>
+      </div>
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li>Integrates AWS S3 for scalable data storage.</li>
+        <li>Provides data-driven RAG solutions leveraging OpenAI and Pinecone.</li>
+      </ul>
+    </section>
+    
+    <hr>
+    
+    <!-- Architecture 19 -->
+    <section id="arch19" class="architecture-section">
+      <h2>Architecture 19: OpenAI + LangChain + Firebase Integration (Realtime RAG)</h2>
+      <button class="toggle-btn">Hide Code</button>
+      <div class="code-block-container">
+        <pre class="code-block">
+firebase_rag/
+├── templates/
+│   └── index.html
+├── static/
+│   ├── css/
+│   │   └── main.css
+│   └── js/
+│       └── main.js
+├── models/
+│   ├── chat_history.py
+│   ├── pinecone.py
+│   ├── openai_api.py
+│   ├── langchain_pipeline.py
+│   └── firebase_handler.py
+├── routes/
+│   ├── api.py
+│   └── chatbot.py
+├── app.py
+└── requirements.txt
+        </pre>
+      </div>
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li>Uses Firebase for realtime data updates and chat analytics.</li>
+        <li>Combines LangChain for conversation management with Pinecone for retrieval.</li>
+      </ul>
+    </section>
+    
+    <hr>
+    
+    <!-- Architecture 20 -->
+    <section id="arch20" class="architecture-section">
+      <h2>Architecture 20: Modular RAG with Plugin-Based Extensibility</h2>
+      <button class="toggle-btn">Hide Code</button>
+      <div class="code-block-container">
+        <pre class="code-block">
+modular_rag/
+├── templates/
+│   └── index.html
+├── static/
+│   ├── css/
+│   │   └── main.css
+│   └── js/
+│       └── main.js
+├── plugins/
+│   ├── plugin_a.py
+│   ├── plugin_b.py
+│   └── plugin_c.py
+├── models/
+│   ├── chat_history.py
+│   ├── pinecone.py
+│   ├── openai_api.py
+│   └── vector_store.py
+├── routes/
+│   ├── api.py
+│   └── chatbot.py
+├── app.py
+└── requirements.txt
+        </pre>
+      </div>
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li>Built with a plugin architecture to allow modular extension and customization of the RAG pipeline.</li>
+        <li>Enables easy integration of new AI modules and data retrieval strategies.</li>
       </ul>
     </section>
     
