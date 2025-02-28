@@ -37,10 +37,12 @@
     
     <hr>
     
+    <!-- Architecture 1 -->
     <section id="arch1" class="architecture-section">
       <h2>Architecture 1: OpenAI + Pinecone (Basic RAG)</h2>
       <button class="toggle-btn">Hide Code</button>
-      <pre class="code-block">
+      <div class="code-block-container">
+        <pre class="code-block">
 rich/
 ├── templates/
 │   └── index.html
@@ -59,7 +61,8 @@ rich/
 │   └── chatbot.py
 ├── app.py
 └── requirements.txt
-      </pre>
+        </pre>
+      </div>
       <p><strong>Features:</strong></p>
       <ul>
         <li>Basic RAG using OpenAI for completions and Pinecone for embeddings.</li>
@@ -68,10 +71,12 @@ rich/
     
     <hr>
     
+    <!-- Architecture 2 -->
     <section id="arch2" class="architecture-section">
       <h2>Architecture 2: OpenAI + LangChain + Pinecone (Advanced RAG)</h2>
       <button class="toggle-btn">Hide Code</button>
-      <pre class="code-block">
+      <div class="code-block-container">
+        <pre class="code-block">
 rich/
 ├── templates/
 │   └── index.html
@@ -91,7 +96,8 @@ rich/
 │   └── chatbot.py
 ├── app.py
 └── requirements.txt
-      </pre>
+        </pre>
+      </div>
       <p><strong>Features:</strong></p>
       <ul>
         <li>Leverages the LangChain framework to manage conversation memory and support advanced chaining of operations.</li>
@@ -100,10 +106,12 @@ rich/
     
     <hr>
     
+    <!-- Architecture 3 -->
     <section id="arch3" class="architecture-section">
       <h2>Architecture 3: OpenAI + Google Generative AI + Pinecone (Hybrid RAG)</h2>
       <button class="toggle-btn">Hide Code</button>
-      <pre class="code-block">
+      <div class="code-block-container">
+        <pre class="code-block">
 rich/
 ├── models/
 │   ├── chat_history.py
@@ -116,7 +124,8 @@ rich/
 │   └── chatbot.py
 ├── app.py
 └── requirements.txt
-      </pre>
+        </pre>
+      </div>
       <p><strong>Features:</strong></p>
       <ul>
         <li>Implements a multi-LLM approach by combining responses from OpenAI and Google Generative AI.</li>
@@ -125,10 +134,12 @@ rich/
     
     <hr>
     
+    <!-- Architecture 4 -->
     <section id="arch4" class="architecture-section">
       <h2>Architecture 4: OpenAI + LangChain + Google AI + Pinecone + SQLAlchemy (Enterprise RAG)</h2>
       <button class="toggle-btn">Hide Code</button>
-      <pre class="code-block">
+      <div class="code-block-container">
+        <pre class="code-block">
 rich/
 ├── models/
 │   ├── chat_history.py
@@ -144,7 +155,8 @@ rich/
 │   └── analytics.py
 ├── app.py
 └── requirements.txt
-      </pre>
+        </pre>
+      </div>
       <p><strong>Features:</strong></p>
       <ul>
         <li>Provides a full enterprise RAG pipeline with multi-LLM fallback, integrated vector search, and SQL-based data retrieval.</li>
@@ -153,10 +165,12 @@ rich/
     
     <hr>
     
+    <!-- Federated Search -->
     <section id="archFederated" class="architecture-section">
       <h2>Full Multi-Model RAG with Federated Search</h2>
       <button class="toggle-btn">Hide Code</button>
-      <pre class="code-block">
+      <div class="code-block-container">
+        <pre class="code-block">
 rich3/
 ├── models/
 │   ├── chat_history.py
@@ -174,7 +188,8 @@ rich3/
 │   └── search_aggregator.py
 ├── app.py
 └── requirements.txt
-      </pre>
+        </pre>
+      </div>
       <p><strong>Features:</strong></p>
       <ul>
         <li>Combines multiple models with federated search to provide an aggregated, comprehensive response mechanism.</li>
@@ -183,10 +198,12 @@ rich3/
     
     <hr>
     
+    <!-- Architecture 5 -->
     <section id="arch5" class="architecture-section">
       <h2>Architecture 5: OpenAI + Redis Cache + Pinecone (Cached RAG)</h2>
       <button class="toggle-btn">Hide Code</button>
-      <pre class="code-block">
+      <div class="code-block-container">
+        <pre class="code-block">
 cached_rag/
 ├── templates/
 │   └── index.html
@@ -206,7 +223,8 @@ cached_rag/
 │   └── chatbot.py
 ├── app.py
 └── requirements.txt
-      </pre>
+        </pre>
+      </div>
       <p><strong>Features:</strong></p>
       <ul>
         <li>Incorporates Redis for caching frequent queries and responses, thereby reducing latency.</li>
@@ -217,10 +235,12 @@ cached_rag/
     
     <hr>
     
+    <!-- Architecture 6 -->
     <section id="arch6" class="architecture-section">
       <h2>Architecture 6: OpenAI + LangChain + ElasticSearch + Pinecone (Enhanced Search RAG)</h2>
       <button class="toggle-btn">Hide Code</button>
-      <pre class="code-block">
+      <div class="code-block-container">
+        <pre class="code-block">
 enhanced_rag/
 ├── templates/
 │   └── index.html
@@ -242,7 +262,8 @@ enhanced_rag/
 │   └── search.py
 ├── app.py
 └── requirements.txt
-      </pre>
+        </pre>
+      </div>
       <p><strong>Features:</strong></p>
       <ul>
         <li>Integrates ElasticSearch for robust full-text search across data.</li>
@@ -253,10 +274,12 @@ enhanced_rag/
     
     <hr>
     
+    <!-- Architecture 7 -->
     <section id="arch7" class="architecture-section">
       <h2>Architecture 7: Microservices-based RAG Chatbot</h2>
       <button class="toggle-btn">Hide Code</button>
-      <pre class="code-block">
+      <div class="code-block-container">
+        <pre class="code-block">
 microservices_rag/
 ├── services/
 │   ├── chatbot_service/
@@ -282,7 +305,8 @@ microservices_rag/
 │       └── main.js
 ├── gateway.py
 └── requirements.txt
-      </pre>
+        </pre>
+      </div>
       <p><strong>Features:</strong></p>
       <ul>
         <li>Splits functionality into discrete microservices for chatbot logic, vector search, and analytics.</li>
@@ -293,10 +317,12 @@ microservices_rag/
     
     <hr>
     
+    <!-- Architecture 8 -->
     <section id="arch8" class="architecture-section">
       <h2>Architecture 8: Hybrid RAG with Knowledge Graph Integration</h2>
       <button class="toggle-btn">Hide Code</button>
-      <pre class="code-block">
+      <div class="code-block-container">
+        <pre class="code-block">
 hybrid_kg_rag/
 ├── templates/
 │   └── index.html
@@ -317,7 +343,8 @@ hybrid_kg_rag/
 │   └── graph_insights.py
 ├── app.py
 └── requirements.txt
-      </pre>
+        </pre>
+      </div>
       <p><strong>Features:</strong></p>
       <ul>
         <li>Enhances RAG by integrating a knowledge graph module for enriched contextual data.</li>
@@ -327,10 +354,12 @@ hybrid_kg_rag/
     
     <hr>
     
+    <!-- Architecture 9 -->
     <section id="arch9" class="architecture-section">
       <h2>Architecture 9: Secure Enterprise RAG with OAuth &amp; RBAC Integration</h2>
       <button class="toggle-btn">Hide Code</button>
-      <pre class="code-block">
+      <div class="code-block-container">
+        <pre class="code-block">
 secure_enterprise_rag/
 ├── templates/
 │   └── index.html
@@ -351,7 +380,8 @@ secure_enterprise_rag/
 │   └── auth_routes.py
 ├── app.py
 └── requirements.txt
-      </pre>
+        </pre>
+      </div>
       <p><strong>Features:</strong></p>
       <ul>
         <li>Implements OAuth for secure authentication along with RBAC for granular user management.</li>
@@ -361,10 +391,12 @@ secure_enterprise_rag/
     
     <hr>
     
+    <!-- Architecture 10 -->
     <section id="arch10" class="architecture-section">
       <h2>Architecture 10: Asynchronous RAG Chatbot with Celery Task Queue</h2>
       <button class="toggle-btn">Hide Code</button>
-      <pre class="code-block">
+      <div class="code-block-container">
+        <pre class="code-block">
 async_rag/
 ├── templates/
 │   └── index.html
@@ -385,7 +417,8 @@ async_rag/
 │   └── celery_tasks.py
 ├── app.py
 └── requirements.txt
-      </pre>
+        </pre>
+      </div>
       <p><strong>Features:</strong></p>
       <ul>
         <li>Uses Celery to handle asynchronous task processing.</li>
@@ -393,6 +426,7 @@ async_rag/
         <li>Optimizes system responsiveness for high-load enterprise applications.</li>
       </ul>
     </section>
+    
   </main>
   
   <footer>
