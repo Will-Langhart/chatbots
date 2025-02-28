@@ -1,26 +1,57 @@
 /* =============================================
-   Theme Variables & Global Settings
+   Intro Section Styling
 ============================================= */
+.intro {
+  background-color: rgba(0, 170, 255, 0.05); /* very subtle accent background */
+  border-left: 4px solid var(--accent-color);
+  padding: 15px 20px;
+  margin: 20px 0;
+  border-radius: 4px;
+  font-size: 0.85rem; /* slightly smaller text */
+  line-height: 1.5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+.intro:hover {
+  transform: translateY(-2px);
+  background-color: rgba(0, 170, 255, 0.1);
+}
+
+.intro p {
+  margin: 10px 0;
+  color: var(--primary-color);
+}
+
+.intro ul {
+  margin: 10px 20px;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.intro ul li {
+  margin: 5px 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+/* =============================================
+   Existing CSS (with minor adjustments for consistency)
+============================================= */
+/* Define theme variables for light and dark modes */
 :root {
-  /* Base Typography */
   --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --base-font-size: 14px; /* slightly smaller base font */
+  --base-font-size: 14px;
   --line-height: 1.4;
-  
-  /* Colors for Light and Dark Modes */
   --color-bg-light: #f4f7f9;
   --color-bg-dark: #181818;
   --primary-color-light: #333;
   --primary-color-dark: #f4f7f9;
   --secondary-color: #555;
-  --accent-color: #00aaff; /* Futuristic blue accent */
-  
-  /* Code Block Colors */
+  --accent-color: #00aaff;
   --code-bg: #1e1e1e;
   --code-text: #d4d4d4;
   --border-color: #444;
-  
-  /* Button & Section Colors */
   --button-bg: #00aaff;
   --button-hover-bg: #0088cc;
   --button-text-color: #fff;
@@ -28,15 +59,13 @@
   --section-bg-dark: #242424;
   --section-border-light: #ccc;
   --section-border-dark: #333;
-  
-  /* Sizing & Spacing */
   --section-border-radius: 10px;
   --transition-speed: 0.3s;
   --shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   --grid-gap: 20px;
 }
 
-/* Set up color mode variables based on user preference */
+/* Apply dark mode based on user preference */
 @media (prefers-color-scheme: dark) {
   :root {
     --color-bg: var(--color-bg-dark);
@@ -55,9 +84,7 @@
   }
 }
 
-/* =============================================
-   Base Element Styles
-============================================= */
+/* Base Styling */
 body {
   font-family: var(--font-family);
   font-size: var(--base-font-size);
@@ -68,9 +95,7 @@ body {
   transition: background-color var(--transition-speed), color var(--transition-speed);
 }
 
-/* =============================================
-   Header & Navigation
-============================================= */
+/* Header & Navigation */
 header {
   background: linear-gradient(135deg, var(--accent-color), #005f99);
   padding: 15px;
@@ -125,9 +150,7 @@ header nav ul li a:hover {
   background-color: var(--button-hover-bg);
 }
 
-/* =============================================
-   Main Content Grid Layout
-============================================= */
+/* Main Content Grid Layout */
 main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -137,9 +160,7 @@ main {
   padding: 10px;
 }
 
-/* =============================================
-   Architecture Section Styles
-============================================= */
+/* Architecture Section Styling */
 .architecture-section {
   background-color: var(--section-bg);
   border: 1px solid var(--section-border);
@@ -147,7 +168,7 @@ main {
   box-shadow: var(--shadow);
   padding: 10px;
   transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-  font-size: 0.85rem; /* compact text */
+  font-size: 0.85rem;
 }
 
 .architecture-section:hover {
@@ -165,15 +186,12 @@ main {
   margin: 5px 0;
 }
 
-/* =============================================
-   Code Block Container & Styles
-============================================= */
+/* Code Block & Copy Button Styling */
 .code-block-container {
   position: relative;
   margin-top: 10px;
 }
 
-/* Enhanced Code Block */
 pre.code-block {
   position: relative;
   background: var(--code-bg);
@@ -183,7 +201,7 @@ pre.code-block {
   border-radius: var(--section-border-radius);
   overflow: auto;
   font-family: Consolas, 'Courier New', monospace;
-  font-size: 0.8rem; /* smaller text for code */
+  font-size: 0.8rem;
   line-height: 1.4;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   animation: fadeIn var(--transition-speed);
@@ -200,7 +218,6 @@ pre.code-block:hover {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Custom Scrollbar for Code Blocks */
 pre.code-block::-webkit-scrollbar {
   height: 6px;
   width: 6px;
@@ -215,9 +232,6 @@ pre.code-block::-webkit-scrollbar-thumb {
   border-radius: 3px;
 }
 
-/* =============================================
-   Buttons: Copy & Toggle
-============================================= */
 .copy-btn {
   position: absolute;
   top: 5px;
@@ -256,9 +270,7 @@ pre.code-block::-webkit-scrollbar-thumb {
   transform: scale(1.03);
 }
 
-/* =============================================
-   Footer Styling
-============================================= */
+/* Footer Styling */
 footer {
   text-align: center;
   margin-top: 20px;
