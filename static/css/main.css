@@ -36,6 +36,104 @@
 }
 
 /* =============================================
+   Chat Interface Container
+============================================= */
+#chat-interface {
+  background: var(--section-bg);
+  border: 1px solid var(--section-border);
+  border-radius: var(--section-border-radius);
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: var(--shadow);
+}
+
+/* Chat Header */
+#chat-interface h2 {
+  font-size: 1.3rem;
+  margin-top: 0;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+/* Chat Box where messages are displayed */
+#chat-box {
+  height: 250px;
+  overflow-y: auto;
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  margin-bottom: 10px;
+  background: var(--color-bg);
+  font-size: 0.8rem;
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Chat Controls: Input and Send Button */
+#chat-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Chat Input Field */
+#chat-input {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+/* Send Button */
+#send-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--button-bg);
+  color: var(--button-text-color);
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background-color var(--transition-speed);
+}
+#send-button:hover {
+  background-color: var(--button-hover-bg);
+}
+
+/* =============================================
+   Chat Message Styling
+============================================= */
+.chat-message {
+  padding: 6px 10px;
+  border-radius: 6px;
+  max-width: 80%;
+  word-wrap: break-word;
+  font-size: 0.8rem;
+  transition: background-color 0.2s ease;
+}
+
+/* User Message (aligned right, subtle blue background) */
+.user-message {
+  background-color: rgba(0, 170, 255, 0.1);
+  align-self: flex-end;
+  text-align: right;
+}
+
+/* Bot Message (aligned left, light grey background) */
+.bot-message {
+  background-color: rgba(0, 0, 0, 0.05);
+  align-self: flex-start;
+  text-align: left;
+}
+
+/* Optional: Hover effect on messages */
+.chat-message:hover {
+  background-color: rgba(0, 170, 255, 0.15);
+}
+
+/* =============================================
    Existing CSS (with minor adjustments for consistency)
 ============================================= */
 /* Define theme variables for light and dark modes */
@@ -300,5 +398,22 @@ footer a:hover {
   header nav ul {
     flex-direction: column;
     gap: 5px;
+  }
+/* =============================================
+   Responsive Adjustments for Chat
+============================================= */
+@media (max-width: 768px) {
+  #chat-interface {
+    max-width: 100%;
+    margin: 15px;
+  }
+  #chat-controls {
+    flex-direction: column;
+  }
+  #chat-input {
+    width: 100%;
+  }
+  #send-button {
+    width: 100%;
   }
 }
