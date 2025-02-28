@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, jsonify
-from models import openai_api, pinecone
+from models import openai_api
 
 app = Flask(__name__)
 
@@ -10,14 +10,8 @@ def index():
 @app.route('/api/chat', methods=['POST'])
 def chat():
     data = request.get_json()
-    user_message = data.get("message")
-    
-    # Get response from OpenAI (or a multi-LLM pipeline)
+    user_message = data.get("message", "")
     response_text = openai_api.get_response(user_message)
-    
-    # Optionally, store vector representation in Pinecone for future retrieval
-    pinecone.store_vector(user_message)
-    
     return jsonify({"response": response_text})
 
 if __name__ == '__main__':
