@@ -1,8 +1,10 @@
 /* =============================================
-   Intro Section Styling
+   Intro Section Styling (Full-Width)
 ============================================= */
 .intro {
-  background-color: rgba(0, 170, 255, 0.05); /* very subtle accent background */
+  grid-column: 1 / -1;  /* Span all columns in the grid */
+  width: 100%;
+  background-color: rgba(0, 170, 255, 0.05); /* subtle accent background */
   border-left: 4px solid var(--accent-color);
   padding: 15px 20px;
   margin: 20px 0;
