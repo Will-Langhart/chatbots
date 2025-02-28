@@ -1,8 +1,8 @@
 /* Define theme variables for light and dark modes */
 :root {
   --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --base-font-size: 16px;
-  --line-height: 1.6;
+  --base-font-size: 14px; /* slightly smaller base */
+  --line-height: 1.4;
   --color-bg-light: #f4f7f9;
   --color-bg-dark: #181818;
   --primary-color-light: #333;
@@ -19,9 +19,10 @@
   --section-bg-dark: #242424;
   --section-border-light: #ccc;
   --section-border-dark: #333;
-  --section-border-radius: 12px;
+  --section-border-radius: 10px;
   --transition-speed: 0.3s;
-  --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  --grid-gap: 20px;
 }
 
 /* Apply dark mode based on user preference */
@@ -48,7 +49,7 @@ body {
   font-family: var(--font-family);
   font-size: var(--base-font-size);
   line-height: var(--line-height);
-  margin: 20px;
+  margin: 10px;
   background-color: var(--color-bg);
   color: var(--primary-color);
   transition: background-color var(--transition-speed), color var(--transition-speed);
@@ -57,17 +58,17 @@ body {
 /* Header Styling */
 header {
   background: linear-gradient(135deg, var(--accent-color), #005f99);
-  padding: 20px;
+  padding: 15px;
   border-radius: var(--section-border-radius);
   color: #fff;
   box-shadow: var(--shadow);
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   text-align: center;
 }
 
 header h1 {
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 header nav ul {
@@ -76,7 +77,7 @@ header nav ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  gap: 10px;
   margin-top: 10px;
 }
 
@@ -85,6 +86,7 @@ header nav ul li a {
   color: #fff;
   font-weight: bold;
   transition: color var(--transition-speed);
+  font-size: 0.9rem;
 }
 
 header nav ul li a:hover {
@@ -93,58 +95,77 @@ header nav ul li a:hover {
 
 #toggle-all {
   display: block;
-  margin: 15px auto 0;
-  padding: 10px 20px;
+  margin: 10px auto 0;
+  padding: 8px 16px;
   background-color: var(--button-bg);
   color: var(--button-text-color);
   border: none;
   border-radius: 6px;
   cursor: pointer;
   transition: background-color var(--transition-speed);
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 #toggle-all:hover {
   background-color: var(--button-hover-bg);
 }
 
-/* Main Content Styling */
+/* Main Content Grid Layout */
+/* Layout 3 sections per row on larger screens */
 main {
-  max-width: 960px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--grid-gap);
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
 }
 
-/* Headings */
-h1, h2 {
-  color: var(--primary-color);
-  font-weight: bold;
-  margin-top: 1.2em;
-  margin-bottom: 0.6em;
+/* Architecture Section Styling */
+.architecture-section {
+  padding: 10px;
+  border: 1px solid var(--section-border);
+  background-color: var(--section-bg);
+  border-radius: var(--section-border-radius);
+  box-shadow: var(--shadow);
+  transition: transform var(--transition-speed);
+  font-size: 0.85rem; /* smaller overall text */
 }
 
-h1 {
-  font-size: 2rem;
+.architecture-section:hover {
+  transform: translateY(-2px);
 }
 
-h2 {
-  font-size: 1.5rem;
+/* Headings within Architecture Section */
+.architecture-section h2 {
+  font-size: 1.2rem;
+  margin-top: 0;
 }
 
-/* Enhanced Code Block Styles */
+/* Paragraphs and details within Architecture Section */
+.architecture-section p {
+  font-size: 0.8rem;
+  margin: 5px 0;
+}
+
+/* Code Block Container and Enhanced Code Block Styles */
+.code-block-container {
+  position: relative;
+  margin-top: 10px;
+}
+
 pre.code-block {
   position: relative;
   background: var(--code-bg);
   color: var(--code-text);
-  padding: 20px;
+  padding: 15px;
   border: 1px solid var(--border-color);
   border-radius: var(--section-border-radius);
   overflow: auto;
   font-family: Consolas, 'Courier New', monospace;
-  font-size: 0.9rem;
-  line-height: 1.5;
+  font-size: 0.8rem; /* smaller code block text */
+  line-height: 1.4;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  margin-top: 10px;
   animation: fadeIn var(--transition-speed);
 }
 
@@ -153,16 +174,15 @@ pre.code-block {
   to { opacity: 1; }
 }
 
-/* Hover effect for code block */
 pre.code-block:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.01);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Custom scrollbar styling for WebKit browsers */
 pre.code-block::-webkit-scrollbar {
-  height: 8px;
-  width: 8px;
+  height: 6px;
+  width: 6px;
 }
 
 pre.code-block::-webkit-scrollbar-track {
@@ -171,27 +191,21 @@ pre.code-block::-webkit-scrollbar-track {
 
 pre.code-block::-webkit-scrollbar-thumb {
   background-color: var(--border-color);
-  border-radius: 4px;
-}
-
-/* Container for code block and copy button */
-.code-block-container {
-  position: relative;
-  margin-bottom: 20px;
+  border-radius: 3px;
 }
 
 /* Copy Button Styling */
 .copy-btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 5px;
+  right: 5px;
   background-color: var(--button-bg);
   color: var(--button-text-color);
   border: none;
-  padding: 6px 12px;
+  padding: 4px 8px;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   opacity: 0.8;
   transition: opacity 0.2s ease, background-color 0.2s ease;
 }
@@ -201,58 +215,31 @@ pre.code-block::-webkit-scrollbar-thumb {
   background-color: var(--button-hover-bg);
 }
 
-/* Horizontal Rule Styling */
-hr {
-  margin: 40px 0;
-  border: none;
-  border-top: 1px solid var(--border-color);
-}
-
-/* Lists */
-ul {
-  margin-left: 20px;
-}
-
-/* Architecture Section Styling */
-.architecture-section {
-  margin-bottom: 30px;
-  padding: 20px;
-  border: 1px solid var(--section-border);
-  background-color: var(--section-bg);
-  border-radius: var(--section-border-radius);
-  box-shadow: var(--shadow);
-  transition: transform var(--transition-speed);
-}
-
-.architecture-section:hover {
-  transform: translateY(-3px);
-}
-
 /* Toggle Button Styling */
 .toggle-btn {
   display: inline-block;
-  margin-bottom: 10px;
-  padding: 8px 16px;
+  margin-bottom: 5px;
+  padding: 6px 12px;
   cursor: pointer;
   background-color: var(--button-bg);
   color: var(--button-text-color);
   border: none;
   border-radius: 6px;
   transition: background-color var(--transition-speed), transform var(--transition-speed);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .toggle-btn:hover {
   background-color: var(--button-hover-bg);
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 /* Footer Styling */
 footer {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 20px;
   padding: 10px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: var(--secondary-color);
 }
 
@@ -268,11 +255,11 @@ footer a:hover {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
   header nav ul {
     flex-direction: column;
-    gap: 10px;
-  }
-  main {
-    padding: 10px;
+    gap: 5px;
   }
 }
