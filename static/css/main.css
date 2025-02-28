@@ -1,20 +1,46 @@
-/* Define theme variables */
+/* Define theme variables for light and dark modes */
 :root {
   --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --base-font-size: 16px;
   --line-height: 1.6;
-  --background-color: #f4f7f9;
-  --primary-color: #333;
+  --color-bg-light: #f4f7f9;
+  --color-bg-dark: #181818;
+  --primary-color-light: #333;
+  --primary-color-dark: #f4f7f9;
   --secondary-color: #555;
-  --accent-color: #0056b3;
-  --code-background: #eef1f5;
-  --border-color: #ddd;
-  --button-bg: #007bff;
-  --button-hover-bg: #0056b3;
+  --accent-color: #00aaff; /* Futuristic blue accent */
+  --code-bg: #1e1e1e;
+  --code-text: #d4d4d4;
+  --border-color: #444;
+  --button-bg: #00aaff;
+  --button-hover-bg: #0088cc;
   --button-text-color: #fff;
-  --section-bg: #fff;
-  --section-border: #ccc;
-  --section-border-radius: 8px;
+  --section-bg-light: #fff;
+  --section-bg-dark: #242424;
+  --section-border-light: #ccc;
+  --section-border-dark: #333;
+  --section-border-radius: 12px;
+  --transition-speed: 0.3s;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Apply dark mode based on user preference */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: var(--color-bg-dark);
+    --primary-color: var(--primary-color-dark);
+    --section-bg: var(--section-bg-dark);
+    --section-border: var(--section-border-dark);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bg: var(--color-bg-light);
+    --primary-color: var(--primary-color-light);
+    --section-bg: var(--section-bg-light);
+    --section-border: var(--section-border-light);
+  }
 }
 
 /* Base Styling */
@@ -23,8 +49,70 @@ body {
   font-size: var(--base-font-size);
   line-height: var(--line-height);
   margin: 20px;
-  background-color: var(--background-color);
+  background-color: var(--color-bg);
   color: var(--primary-color);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+/* Header Styling */
+header {
+  background: linear-gradient(135deg, var(--accent-color), #005f99);
+  padding: 20px;
+  border-radius: var(--section-border-radius);
+  color: #fff;
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color var(--transition-speed);
+}
+
+header nav ul li a:hover {
+  color: var(--button-bg);
+}
+
+#toggle-all {
+  display: block;
+  margin: 15px auto 0;
+  padding: 10px 20px;
+  background-color: var(--button-bg);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color var(--transition-speed);
+  font-size: 1rem;
+}
+
+#toggle-all:hover {
+  background-color: var(--button-hover-bg);
+}
+
+/* Main Content Styling */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 /* Headings */
@@ -45,25 +133,33 @@ h2 {
 
 /* Code Block Styling */
 pre.code-block {
-  background: var(--code-background);
+  background: var(--code-bg);
+  color: var(--code-text);
   padding: 15px;
-  border: 1px solid var(--section-border);
+  border: 1px solid var(--border-color);
   overflow-x: auto;
   white-space: pre-wrap;
   margin-top: 10px;
   border-radius: var(--section-border-radius);
   font-family: Consolas, 'Courier New', monospace;
   font-size: 0.9rem;
+  transition: background var(--transition-speed), color var(--transition-speed);
+  animation: fadeIn var(--transition-speed);
 }
 
-/* Horizontal Rule */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Horizontal Rule Styling */
 hr {
   margin: 40px 0;
-  border: 0;
+  border: none;
   border-top: 1px solid var(--border-color);
 }
 
-/* Unordered Lists */
+/* Lists */
 ul {
   margin-left: 20px;
 }
@@ -75,7 +171,12 @@ ul {
   border: 1px solid var(--section-border);
   background-color: var(--section-bg);
   border-radius: var(--section-border-radius);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow);
+  transition: transform var(--transition-speed);
+}
+
+.architecture-section:hover {
+  transform: translateY(-3px);
 }
 
 /* Toggle Button Styling */
@@ -87,41 +188,33 @@ ul {
   background-color: var(--button-bg);
   color: var(--button-text-color);
   border: none;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  border-radius: 6px;
+  transition: background-color var(--transition-speed), transform var(--transition-speed);
   font-size: 0.9rem;
 }
 
 .toggle-btn:hover {
   background-color: var(--button-hover-bg);
-}
-
-/* Navigation Menu (if applicable) */
-header nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-header nav ul li a {
-  text-decoration: none;
-  color: var(--accent-color);
-  font-weight: bold;
-  transition: color 0.2s ease;
-}
-
-header nav ul li a:hover {
-  color: var(--button-bg);
+  transform: scale(1.05);
 }
 
 /* Footer Styling */
 footer {
   text-align: center;
   margin-top: 40px;
+  padding: 10px;
   font-size: 0.9rem;
   color: var(--secondary-color);
+}
+
+footer a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 /* Responsive Adjustments */
@@ -129,5 +222,8 @@ footer {
   header nav ul {
     flex-direction: column;
     gap: 10px;
+  }
+  main {
+    padding: 10px;
   }
 }
