@@ -2,24 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Integrated Python Flask RAG AI Chatbot Architectures</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
-<body>
-  <h1>Integrated Python Flask RAG AI Chatbot Architectures</h1>
-  <p>
-    This document provides a comprehensive overview of various architectures for building Python Flask RAG AI Chatbots.
-    Each architecture is designed with distinct integrations and features to suit different operational requirements—
-    from basic retrieval-augmented generation (RAG) to advanced enterprise-grade pipelines with microservices, caching,
-    asynchronous processing, and enhanced search capabilities.
-  </p>
+<body id="top">
+  <header>
+    <h1>Integrated Python Flask RAG AI Chatbot Architectures</h1>
+    <nav>
+      <ul>
+        <li><a href="#arch1">Architecture 1</a></li>
+        <li><a href="#arch2">Architecture 2</a></li>
+        <li><a href="#arch3">Architecture 3</a></li>
+        <li><a href="#arch4">Architecture 4</a></li>
+        <li><a href="#archFederated">Federated Search</a></li>
+        <li><a href="#arch5">Architecture 5</a></li>
+        <li><a href="#arch6">Architecture 6</a></li>
+        <li><a href="#arch7">Architecture 7</a></li>
+        <li><a href="#arch8">Architecture 8</a></li>
+        <li><a href="#arch9">Architecture 9</a></li>
+        <li><a href="#arch10">Architecture 10</a></li>
+      </ul>
+    </nav>
+    <button id="toggle-all">Toggle All Code</button>
+  </header>
   
-  <hr>
-  
-  <div class="architecture-section">
-    <h2>Architecture 1: OpenAI + Pinecone (Basic RAG)</h2>
-    <button class="toggle-btn">Hide Code</button>
-    <pre class="code-block">
+  <main>
+    <p>
+      This document provides a comprehensive overview of various architectures for building Python Flask RAG AI Chatbots.
+      Each architecture is designed with distinct integrations and features to suit different operational requirements—
+      from basic retrieval-augmented generation (RAG) to advanced enterprise-grade pipelines with microservices, caching,
+      asynchronous processing, and enhanced search capabilities.
+    </p>
+    
+    <hr>
+    
+    <section id="arch1" class="architecture-section">
+      <h2>Architecture 1: OpenAI + Pinecone (Basic RAG)</h2>
+      <button class="toggle-btn">Hide Code</button>
+      <pre class="code-block">
 rich/
 ├── templates/
 │   └── index.html
@@ -38,19 +59,19 @@ rich/
 │   └── chatbot.py
 ├── app.py
 └── requirements.txt
-    </pre>
-    <p><strong>Features:</strong></p>
-    <ul>
-      <li>Basic RAG using OpenAI for completions and Pinecone for embeddings.</li>
-    </ul>
-  </div>
-  
-  <hr>
-  
-  <div class="architecture-section">
-    <h2>Architecture 2: OpenAI + LangChain + Pinecone (Advanced RAG)</h2>
-    <button class="toggle-btn">Hide Code</button>
-    <pre class="code-block">
+      </pre>
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li>Basic RAG using OpenAI for completions and Pinecone for embeddings.</li>
+      </ul>
+    </section>
+    
+    <hr>
+    
+    <section id="arch2" class="architecture-section">
+      <h2>Architecture 2: OpenAI + LangChain + Pinecone (Advanced RAG)</h2>
+      <button class="toggle-btn">Hide Code</button>
+      <pre class="code-block">
 rich/
 ├── templates/
 │   └── index.html
@@ -70,19 +91,19 @@ rich/
 │   └── chatbot.py
 ├── app.py
 └── requirements.txt
-    </pre>
-    <p><strong>Features:</strong></p>
-    <ul>
-      <li>Leverages the LangChain framework to manage conversation memory and support advanced chaining of operations.</li>
-    </ul>
-  </div>
-  
-  <hr>
-  
-  <div class="architecture-section">
-    <h2>Architecture 3: OpenAI + Google Generative AI + Pinecone (Hybrid RAG)</h2>
-    <button class="toggle-btn">Hide Code</button>
-    <pre class="code-block">
+      </pre>
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li>Leverages the LangChain framework to manage conversation memory and support advanced chaining of operations.</li>
+      </ul>
+    </section>
+    
+    <hr>
+    
+    <section id="arch3" class="architecture-section">
+      <h2>Architecture 3: OpenAI + Google Generative AI + Pinecone (Hybrid RAG)</h2>
+      <button class="toggle-btn">Hide Code</button>
+      <pre class="code-block">
 rich/
 ├── models/
 │   ├── chat_history.py
@@ -95,19 +116,19 @@ rich/
 │   └── chatbot.py
 ├── app.py
 └── requirements.txt
-    </pre>
-    <p><strong>Features:</strong></p>
-    <ul>
-      <li>Implements a multi-LLM approach by combining responses from OpenAI and Google Generative AI.</li>
-    </ul>
-  </div>
-  
-  <hr>
-  
-  <div class="architecture-section">
-    <h2>Architecture 4: OpenAI + LangChain + Google AI + Pinecone + SQLAlchemy (Enterprise RAG)</h2>
-    <button class="toggle-btn">Hide Code</button>
-    <pre class="code-block">
+      </pre>
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li>Implements a multi-LLM approach by combining responses from OpenAI and Google Generative AI.</li>
+      </ul>
+    </section>
+    
+    <hr>
+    
+    <section id="arch4" class="architecture-section">
+      <h2>Architecture 4: OpenAI + LangChain + Google AI + Pinecone + SQLAlchemy (Enterprise RAG)</h2>
+      <button class="toggle-btn">Hide Code</button>
+      <pre class="code-block">
 rich/
 ├── models/
 │   ├── chat_history.py
@@ -123,19 +144,19 @@ rich/
 │   └── analytics.py
 ├── app.py
 └── requirements.txt
-    </pre>
-    <p><strong>Features:</strong></p>
-    <ul>
-      <li>Provides a full enterprise RAG pipeline with multi-LLM fallback, integrated vector search, and SQL-based data retrieval.</li>
-    </ul>
-  </div>
-  
-  <hr>
-  
-  <div class="architecture-section">
-    <h2>Full Multi-Model RAG with Federated Search</h2>
-    <button class="toggle-btn">Hide Code</button>
-    <pre class="code-block">
+      </pre>
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li>Provides a full enterprise RAG pipeline with multi-LLM fallback, integrated vector search, and SQL-based data retrieval.</li>
+      </ul>
+    </section>
+    
+    <hr>
+    
+    <section id="archFederated" class="architecture-section">
+      <h2>Full Multi-Model RAG with Federated Search</h2>
+      <button class="toggle-btn">Hide Code</button>
+      <pre class="code-block">
 rich3/
 ├── models/
 │   ├── chat_history.py
@@ -153,19 +174,19 @@ rich3/
 │   └── search_aggregator.py
 ├── app.py
 └── requirements.txt
-    </pre>
-    <p><strong>Features:</strong></p>
-    <ul>
-      <li>Combines multiple models with federated search to provide an aggregated, comprehensive response mechanism.</li>
-    </ul>
-  </div>
-  
-  <hr>
-  
-  <div class="architecture-section">
-    <h2>Architecture 5: OpenAI + Redis Cache + Pinecone (Cached RAG)</h2>
-    <button class="toggle-btn">Hide Code</button>
-    <pre class="code-block">
+      </pre>
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li>Combines multiple models with federated search to provide an aggregated, comprehensive response mechanism.</li>
+      </ul>
+    </section>
+    
+    <hr>
+    
+    <section id="arch5" class="architecture-section">
+      <h2>Architecture 5: OpenAI + Redis Cache + Pinecone (Cached RAG)</h2>
+      <button class="toggle-btn">Hide Code</button>
+      <pre class="code-block">
 cached_rag/
 ├── templates/
 │   └── index.html
@@ -185,21 +206,21 @@ cached_rag/
 │   └── chatbot.py
 ├── app.py
 └── requirements.txt
-    </pre>
-    <p><strong>Features:</strong></p>
-    <ul>
-      <li>Incorporates Redis for caching frequent queries and responses, thereby reducing latency.</li>
-      <li>Uses Pinecone for vector storage and OpenAI for response generation.</li>
-      <li>Optimized for performance improvements via caching.</li>
-    </ul>
-  </div>
-  
-  <hr>
-  
-  <div class="architecture-section">
-    <h2>Architecture 6: OpenAI + LangChain + ElasticSearch + Pinecone (Enhanced Search RAG)</h2>
-    <button class="toggle-btn">Hide Code</button>
-    <pre class="code-block">
+      </pre>
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li>Incorporates Redis for caching frequent queries and responses, thereby reducing latency.</li>
+        <li>Uses Pinecone for vector storage and OpenAI for response generation.</li>
+        <li>Optimized for performance improvements via caching.</li>
+      </ul>
+    </section>
+    
+    <hr>
+    
+    <section id="arch6" class="architecture-section">
+      <h2>Architecture 6: OpenAI + LangChain + ElasticSearch + Pinecone (Enhanced Search RAG)</h2>
+      <button class="toggle-btn">Hide Code</button>
+      <pre class="code-block">
 enhanced_rag/
 ├── templates/
 │   └── index.html
@@ -221,21 +242,21 @@ enhanced_rag/
 │   └── search.py
 ├── app.py
 └── requirements.txt
-    </pre>
-    <p><strong>Features:</strong></p>
-    <ul>
-      <li>Integrates ElasticSearch for robust full-text search across data.</li>
-      <li>Uses LangChain to manage conversation memory and advanced logic.</li>
-      <li>Combines strengths of Pinecone and OpenAI for a highly responsive system.</li>
-    </ul>
-  </div>
-  
-  <hr>
-  
-  <div class="architecture-section">
-    <h2>Architecture 7: Microservices-based RAG Chatbot</h2>
-    <button class="toggle-btn">Hide Code</button>
-    <pre class="code-block">
+      </pre>
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li>Integrates ElasticSearch for robust full-text search across data.</li>
+        <li>Uses LangChain to manage conversation memory and advanced logic.</li>
+        <li>Combines strengths of Pinecone and OpenAI for a highly responsive system.</li>
+      </ul>
+    </section>
+    
+    <hr>
+    
+    <section id="arch7" class="architecture-section">
+      <h2>Architecture 7: Microservices-based RAG Chatbot</h2>
+      <button class="toggle-btn">Hide Code</button>
+      <pre class="code-block">
 microservices_rag/
 ├── services/
 │   ├── chatbot_service/
@@ -261,21 +282,21 @@ microservices_rag/
 │       └── main.js
 ├── gateway.py
 └── requirements.txt
-    </pre>
-    <p><strong>Features:</strong></p>
-    <ul>
-      <li>Splits functionality into discrete microservices for chatbot logic, vector search, and analytics.</li>
-      <li>Facilitates scalable, decoupled deployments where each service can be maintained independently.</li>
-      <li>Employs a gateway to aggregate API calls and route requests to the appropriate service.</li>
-    </ul>
-  </div>
-  
-  <hr>
-  
-  <div class="architecture-section">
-    <h2>Architecture 8: Hybrid RAG with Knowledge Graph Integration</h2>
-    <button class="toggle-btn">Hide Code</button>
-    <pre class="code-block">
+      </pre>
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li>Splits functionality into discrete microservices for chatbot logic, vector search, and analytics.</li>
+        <li>Facilitates scalable, decoupled deployments where each service can be maintained independently.</li>
+        <li>Employs a gateway to aggregate API calls and route requests to the appropriate service.</li>
+      </ul>
+    </section>
+    
+    <hr>
+    
+    <section id="arch8" class="architecture-section">
+      <h2>Architecture 8: Hybrid RAG with Knowledge Graph Integration</h2>
+      <button class="toggle-btn">Hide Code</button>
+      <pre class="code-block">
 hybrid_kg_rag/
 ├── templates/
 │   └── index.html
@@ -296,20 +317,20 @@ hybrid_kg_rag/
 │   └── graph_insights.py
 ├── app.py
 └── requirements.txt
-    </pre>
-    <p><strong>Features:</strong></p>
-    <ul>
-      <li>Enhances RAG by integrating a knowledge graph module for enriched contextual data.</li>
-      <li>Uses graph-based retrieval to map deep domain knowledge and relationships.</li>
-    </ul>
-  </div>
-  
-  <hr>
-  
-  <div class="architecture-section">
-    <h2>Architecture 9: Secure Enterprise RAG with OAuth &amp; RBAC Integration</h2>
-    <button class="toggle-btn">Hide Code</button>
-    <pre class="code-block">
+      </pre>
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li>Enhances RAG by integrating a knowledge graph module for enriched contextual data.</li>
+        <li>Uses graph-based retrieval to map deep domain knowledge and relationships.</li>
+      </ul>
+    </section>
+    
+    <hr>
+    
+    <section id="arch9" class="architecture-section">
+      <h2>Architecture 9: Secure Enterprise RAG with OAuth &amp; RBAC Integration</h2>
+      <button class="toggle-btn">Hide Code</button>
+      <pre class="code-block">
 secure_enterprise_rag/
 ├── templates/
 │   └── index.html
@@ -330,20 +351,20 @@ secure_enterprise_rag/
 │   └── auth_routes.py
 ├── app.py
 └── requirements.txt
-    </pre>
-    <p><strong>Features:</strong></p>
-    <ul>
-      <li>Implements OAuth for secure authentication along with RBAC for granular user management.</li>
-      <li>Provides a secure, enterprise-grade environment with robust RAG capabilities.</li>
-    </ul>
-  </div>
-  
-  <hr>
-  
-  <div class="architecture-section">
-    <h2>Architecture 10: Asynchronous RAG Chatbot with Celery Task Queue</h2>
-    <button class="toggle-btn">Hide Code</button>
-    <pre class="code-block">
+      </pre>
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li>Implements OAuth for secure authentication along with RBAC for granular user management.</li>
+        <li>Provides a secure, enterprise-grade environment with robust RAG capabilities.</li>
+      </ul>
+    </section>
+    
+    <hr>
+    
+    <section id="arch10" class="architecture-section">
+      <h2>Architecture 10: Asynchronous RAG Chatbot with Celery Task Queue</h2>
+      <button class="toggle-btn">Hide Code</button>
+      <pre class="code-block">
 async_rag/
 ├── templates/
 │   └── index.html
@@ -364,21 +385,19 @@ async_rag/
 │   └── celery_tasks.py
 ├── app.py
 └── requirements.txt
-    </pre>
-    <p><strong>Features:</strong></p>
-    <ul>
-      <li>Uses Celery to handle asynchronous task processing.</li>
-      <li>Efficiently manages long-running tasks (e.g., complex query processing, background vector updates).</li>
-      <li>Optimizes system responsiveness for high-load enterprise applications.</li>
-    </ul>
-  </div>
+      </pre>
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li>Uses Celery to handle asynchronous task processing.</li>
+        <li>Efficiently manages long-running tasks (e.g., complex query processing, background vector updates).</li>
+        <li>Optimizes system responsiveness for high-load enterprise applications.</li>
+      </ul>
+    </section>
+  </main>
   
-  <hr>
-  
-  <p>
-    This document consolidates all architectures and their respective features into one comprehensive reference
-    for designing a Python Flask RAG AI Chatbot system tailored to various operational needs.
-  </p>
+  <footer>
+    <p><a href="#top">Back to Top</a></p>
+  </footer>
   
   <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
