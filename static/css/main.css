@@ -1,17 +1,26 @@
-/* Define theme variables for light and dark modes */
+/* =============================================
+   Theme Variables & Global Settings
+============================================= */
 :root {
+  /* Base Typography */
   --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --base-font-size: 14px; /* slightly smaller base */
+  --base-font-size: 14px; /* slightly smaller base font */
   --line-height: 1.4;
+  
+  /* Colors for Light and Dark Modes */
   --color-bg-light: #f4f7f9;
   --color-bg-dark: #181818;
   --primary-color-light: #333;
   --primary-color-dark: #f4f7f9;
   --secondary-color: #555;
   --accent-color: #00aaff; /* Futuristic blue accent */
+  
+  /* Code Block Colors */
   --code-bg: #1e1e1e;
   --code-text: #d4d4d4;
   --border-color: #444;
+  
+  /* Button & Section Colors */
   --button-bg: #00aaff;
   --button-hover-bg: #0088cc;
   --button-text-color: #fff;
@@ -19,13 +28,15 @@
   --section-bg-dark: #242424;
   --section-border-light: #ccc;
   --section-border-dark: #333;
+  
+  /* Sizing & Spacing */
   --section-border-radius: 10px;
   --transition-speed: 0.3s;
   --shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   --grid-gap: 20px;
 }
 
-/* Apply dark mode based on user preference */
+/* Set up color mode variables based on user preference */
 @media (prefers-color-scheme: dark) {
   :root {
     --color-bg: var(--color-bg-dark);
@@ -44,7 +55,9 @@
   }
 }
 
-/* Base Styling */
+/* =============================================
+   Base Element Styles
+============================================= */
 body {
   font-family: var(--font-family);
   font-size: var(--base-font-size);
@@ -55,7 +68,9 @@ body {
   transition: background-color var(--transition-speed), color var(--transition-speed);
 }
 
-/* Header Styling */
+/* =============================================
+   Header & Navigation
+============================================= */
 header {
   background: linear-gradient(135deg, var(--accent-color), #005f99);
   padding: 15px;
@@ -85,8 +100,8 @@ header nav ul li a {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
-  transition: color var(--transition-speed);
   font-size: 0.9rem;
+  transition: color var(--transition-speed);
 }
 
 header nav ul li a:hover {
@@ -110,8 +125,9 @@ header nav ul li a:hover {
   background-color: var(--button-hover-bg);
 }
 
-/* Main Content Grid Layout */
-/* Layout 3 sections per row on larger screens */
+/* =============================================
+   Main Content Grid Layout
+============================================= */
 main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -121,39 +137,43 @@ main {
   padding: 10px;
 }
 
-/* Architecture Section Styling */
+/* =============================================
+   Architecture Section Styles
+============================================= */
 .architecture-section {
-  padding: 10px;
-  border: 1px solid var(--section-border);
   background-color: var(--section-bg);
+  border: 1px solid var(--section-border);
   border-radius: var(--section-border-radius);
   box-shadow: var(--shadow);
-  transition: transform var(--transition-speed);
-  font-size: 0.85rem; /* smaller overall text */
+  padding: 10px;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  font-size: 0.85rem; /* compact text */
 }
 
 .architecture-section:hover {
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Headings within Architecture Section */
 .architecture-section h2 {
   font-size: 1.2rem;
   margin-top: 0;
 }
 
-/* Paragraphs and details within Architecture Section */
 .architecture-section p {
   font-size: 0.8rem;
   margin: 5px 0;
 }
 
-/* Code Block Container and Enhanced Code Block Styles */
+/* =============================================
+   Code Block Container & Styles
+============================================= */
 .code-block-container {
   position: relative;
   margin-top: 10px;
 }
 
+/* Enhanced Code Block */
 pre.code-block {
   position: relative;
   background: var(--code-bg);
@@ -163,10 +183,11 @@ pre.code-block {
   border-radius: var(--section-border-radius);
   overflow: auto;
   font-family: Consolas, 'Courier New', monospace;
-  font-size: 0.8rem; /* smaller code block text */
+  font-size: 0.8rem; /* smaller text for code */
   line-height: 1.4;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   animation: fadeIn var(--transition-speed);
+  margin-top: 5px;
 }
 
 @keyframes fadeIn {
@@ -179,7 +200,7 @@ pre.code-block:hover {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Custom scrollbar styling for WebKit browsers */
+/* Custom Scrollbar for Code Blocks */
 pre.code-block::-webkit-scrollbar {
   height: 6px;
   width: 6px;
@@ -194,7 +215,9 @@ pre.code-block::-webkit-scrollbar-thumb {
   border-radius: 3px;
 }
 
-/* Copy Button Styling */
+/* =============================================
+   Buttons: Copy & Toggle
+============================================= */
 .copy-btn {
   position: absolute;
   top: 5px;
@@ -215,7 +238,6 @@ pre.code-block::-webkit-scrollbar-thumb {
   background-color: var(--button-hover-bg);
 }
 
-/* Toggle Button Styling */
 .toggle-btn {
   display: inline-block;
   margin-bottom: 5px;
@@ -234,7 +256,9 @@ pre.code-block::-webkit-scrollbar-thumb {
   transform: scale(1.03);
 }
 
-/* Footer Styling */
+/* =============================================
+   Footer Styling
+============================================= */
 footer {
   text-align: center;
   margin-top: 20px;
@@ -253,11 +277,14 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Responsive Adjustments */
+/* =============================================
+   Responsive Adjustments
+============================================= */
 @media (max-width: 768px) {
   main {
     grid-template-columns: 1fr;
   }
+  
   header nav ul {
     flex-direction: column;
     gap: 5px;
