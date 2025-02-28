@@ -60,6 +60,9 @@
     <!-- Architecture 1 -->
     <section id="arch1" class="architecture-section">
       <h2>Architecture 1: OpenAI + Pinecone (Basic RAG)</h2>
+      <p><strong>Overview:</strong> This architecture uses the combination of OpenAI for text completions and Pinecone for storing embeddings. It is ideal for simple retrieval-augmented generation tasks.</p>
+      <p><strong>Key Components:</strong> Templates for UI, static assets for styling and JS, models for chat history and vector storage, and a basic API route.</p>
+      <p><strong>Benefits:</strong> Easy to implement, minimal external dependencies, and serves as a great starting point for RAG-based chatbot systems.</p>
       <button class="toggle-btn">Hide Code</button>
       <div class="code-block-container">
         <pre class="code-block">
@@ -94,6 +97,9 @@ rich/
     <!-- Architecture 2 -->
     <section id="arch2" class="architecture-section">
       <h2>Architecture 2: OpenAI + LangChain + Pinecone (Advanced RAG)</h2>
+      <p><strong>Overview:</strong> This design extends the basic architecture with the LangChain framework for enhanced conversation memory and chaining logic.</p>
+      <p><strong>Key Components:</strong> In addition to the basic modules, a LangChain pipeline module is added to handle complex conversation states.</p>
+      <p><strong>Benefits:</strong> Supports more advanced and contextual conversations, enabling richer interactions.</p>
       <button class="toggle-btn">Hide Code</button>
       <div class="code-block-container">
         <pre class="code-block">
@@ -120,7 +126,8 @@ rich/
       </div>
       <p><strong>Features:</strong></p>
       <ul>
-        <li>Leverages the LangChain framework to manage conversation memory and support advanced chaining of operations.</li>
+        <li>Manages conversation memory with LangChain.</li>
+        <li>Supports advanced chaining of operations.</li>
       </ul>
     </section>
     
@@ -129,6 +136,9 @@ rich/
     <!-- Architecture 3 -->
     <section id="arch3" class="architecture-section">
       <h2>Architecture 3: OpenAI + Google Generative AI + Pinecone (Hybrid RAG)</h2>
+      <p><strong>Overview:</strong> Combines multiple language models, leveraging both OpenAI and Google Generative AI, with Pinecone for vector storage.</p>
+      <p><strong>Key Components:</strong> A multi-LLM integration layer that dynamically selects the best response source.</p>
+      <p><strong>Benefits:</strong> Offers fallback options and improves overall response quality and reliability.</p>
       <button class="toggle-btn">Hide Code</button>
       <div class="code-block-container">
         <pre class="code-block">
@@ -148,7 +158,7 @@ rich/
       </div>
       <p><strong>Features:</strong></p>
       <ul>
-        <li>Implements a multi-LLM approach by combining responses from OpenAI and Google Generative AI.</li>
+        <li>Multi-LLM integration for enhanced responses.</li>
       </ul>
     </section>
     
@@ -157,6 +167,9 @@ rich/
     <!-- Architecture 4 -->
     <section id="arch4" class="architecture-section">
       <h2>Architecture 4: OpenAI + LangChain + Google AI + Pinecone + SQLAlchemy (Enterprise RAG)</h2>
+      <p><strong>Overview:</strong> An enterprise solution that leverages multi-LLM fallback, robust SQL-based data retrieval, and advanced vector search.</p>
+      <p><strong>Key Components:</strong> Integration with SQLAlchemy for database management and analytics routes for performance tracking.</p>
+      <p><strong>Benefits:</strong> Ideal for large-scale applications with heavy data retrieval needs and enterprise security requirements.</p>
       <button class="toggle-btn">Hide Code</button>
       <div class="code-block-container">
         <pre class="code-block">
@@ -179,7 +192,8 @@ rich/
       </div>
       <p><strong>Features:</strong></p>
       <ul>
-        <li>Provides a full enterprise RAG pipeline with multi-LLM fallback, integrated vector search, and SQL-based data retrieval.</li>
+        <li>Enterprise-grade data retrieval and analytics.</li>
+        <li>Multi-LLM fallback for improved reliability.</li>
       </ul>
     </section>
     
@@ -188,6 +202,9 @@ rich/
     <!-- Federated Search -->
     <section id="archFederated" class="architecture-section">
       <h2>Full Multi-Model RAG with Federated Search</h2>
+      <p><strong>Overview:</strong> This architecture aggregates responses from multiple models to provide a unified search and answer experience.</p>
+      <p><strong>Key Components:</strong> Federated search service that consolidates results from various AI modules.</p>
+      <p><strong>Benefits:</strong> Ensures comprehensive response coverage and improved search relevance.</p>
       <button class="toggle-btn">Hide Code</button>
       <div class="code-block-container">
         <pre class="code-block">
@@ -212,7 +229,8 @@ rich3/
       </div>
       <p><strong>Features:</strong></p>
       <ul>
-        <li>Combines multiple models with federated search to provide an aggregated, comprehensive response mechanism.</li>
+        <li>Aggregates results from multiple AI modules.</li>
+        <li>Provides a unified search experience.</li>
       </ul>
     </section>
     
@@ -221,6 +239,9 @@ rich3/
     <!-- Architecture 5 -->
     <section id="arch5" class="architecture-section">
       <h2>Architecture 5: OpenAI + Redis Cache + Pinecone (Cached RAG)</h2>
+      <p><strong>Overview:</strong> Enhances the basic RAG pipeline by adding Redis caching for improved latency and performance.</p>
+      <p><strong>Key Components:</strong> Integration with Redis to cache frequent queries and responses.</p>
+      <p><strong>Benefits:</strong> Reduces API load and improves response times significantly.</p>
       <button class="toggle-btn">Hide Code</button>
       <div class="code-block-container">
         <pre class="code-block">
@@ -247,9 +268,8 @@ cached_rag/
       </div>
       <p><strong>Features:</strong></p>
       <ul>
-        <li>Incorporates Redis for caching frequent queries and responses, thereby reducing latency.</li>
-        <li>Uses Pinecone for vector storage and OpenAI for response generation.</li>
-        <li>Optimized for performance improvements via caching.</li>
+        <li>Integrates Redis for caching.</li>
+        <li>Improves performance via faster response times.</li>
       </ul>
     </section>
     
@@ -258,6 +278,9 @@ cached_rag/
     <!-- Architecture 6 -->
     <section id="arch6" class="architecture-section">
       <h2>Architecture 6: OpenAI + LangChain + ElasticSearch + Pinecone (Enhanced Search RAG)</h2>
+      <p><strong>Overview:</strong> Combines powerful search capabilities with LangChain’s conversational logic and Pinecone’s vector storage.</p>
+      <p><strong>Key Components:</strong> ElasticSearch for full-text search, LangChain for memory management, and Pinecone for rapid vector lookups.</p>
+      <p><strong>Benefits:</strong> Enhances retrieval accuracy and provides a seamless search experience for complex queries.</p>
       <button class="toggle-btn">Hide Code</button>
       <div class="code-block-container">
         <pre class="code-block">
@@ -286,9 +309,8 @@ enhanced_rag/
       </div>
       <p><strong>Features:</strong></p>
       <ul>
-        <li>Integrates ElasticSearch for robust full-text search across data.</li>
-        <li>Uses LangChain to manage conversation memory and advanced logic.</li>
-        <li>Combines strengths of Pinecone and OpenAI for a highly responsive system.</li>
+        <li>Robust full-text search integration.</li>
+        <li>Manages conversation memory for more natural responses.</li>
       </ul>
     </section>
     
@@ -297,6 +319,9 @@ enhanced_rag/
     <!-- Architecture 7 -->
     <section id="arch7" class="architecture-section">
       <h2>Architecture 7: Microservices-based RAG Chatbot</h2>
+      <p><strong>Overview:</strong> Divides the chatbot functionality into discrete, independently scalable microservices.</p>
+      <p><strong>Key Components:</strong> Separate services for chatbot logic, vector search, and analytics, coordinated by a gateway.</p>
+      <p><strong>Benefits:</strong> Offers improved scalability and maintainability for large enterprise deployments.</p>
       <button class="toggle-btn">Hide Code</button>
       <div class="code-block-container">
         <pre class="code-block">
@@ -329,9 +354,8 @@ microservices_rag/
       </div>
       <p><strong>Features:</strong></p>
       <ul>
-        <li>Splits functionality into discrete microservices for chatbot logic, vector search, and analytics.</li>
-        <li>Facilitates scalable, decoupled deployments where each service can be maintained independently.</li>
-        <li>Employs a gateway to aggregate API calls and route requests to the appropriate service.</li>
+        <li>Decoupled microservices for better scalability.</li>
+        <li>Centralized gateway to manage API calls efficiently.</li>
       </ul>
     </section>
     
@@ -340,6 +364,9 @@ microservices_rag/
     <!-- Architecture 8 -->
     <section id="arch8" class="architecture-section">
       <h2>Architecture 8: Hybrid RAG with Knowledge Graph Integration</h2>
+      <p><strong>Overview:</strong> Enhances RAG by incorporating a knowledge graph module for deeper contextual understanding.</p>
+      <p><strong>Key Components:</strong> A knowledge graph for mapping relationships, integrated with traditional vector search methods.</p>
+      <p><strong>Benefits:</strong> Provides enriched and context-aware responses for complex domains.</p>
       <button class="toggle-btn">Hide Code</button>
       <div class="code-block-container">
         <pre class="code-block">
@@ -367,8 +394,8 @@ hybrid_kg_rag/
       </div>
       <p><strong>Features:</strong></p>
       <ul>
-        <li>Enhances RAG by integrating a knowledge graph module for enriched contextual data.</li>
-        <li>Uses graph-based retrieval to map deep domain knowledge and relationships.</li>
+        <li>Enriches responses with deep contextual data.</li>
+        <li>Maps domain-specific relationships effectively.</li>
       </ul>
     </section>
     
@@ -377,6 +404,9 @@ hybrid_kg_rag/
     <!-- Architecture 9 -->
     <section id="arch9" class="architecture-section">
       <h2>Architecture 9: Secure Enterprise RAG with OAuth &amp; RBAC Integration</h2>
+      <p><strong>Overview:</strong> Focuses on security and role-based access in an enterprise environment while delivering RAG functionality.</p>
+      <p><strong>Key Components:</strong> OAuth integration and RBAC modules ensure only authorized users can access sensitive data.</p>
+      <p><strong>Benefits:</strong> Provides robust security measures for corporate deployments.</p>
       <button class="toggle-btn">Hide Code</button>
       <div class="code-block-container">
         <pre class="code-block">
@@ -404,8 +434,8 @@ secure_enterprise_rag/
       </div>
       <p><strong>Features:</strong></p>
       <ul>
-        <li>Implements OAuth for secure authentication along with RBAC for granular user management.</li>
-        <li>Provides a secure, enterprise-grade environment with robust RAG capabilities.</li>
+        <li>Secure authentication and granular user management.</li>
+        <li>Enterprise-grade security features.</li>
       </ul>
     </section>
     
@@ -414,6 +444,9 @@ secure_enterprise_rag/
     <!-- Architecture 10 -->
     <section id="arch10" class="architecture-section">
       <h2>Architecture 10: Asynchronous RAG Chatbot with Celery Task Queue</h2>
+      <p><strong>Overview:</strong> Leverages Celery for handling long-running tasks asynchronously, ensuring the system remains responsive under high load.</p>
+      <p><strong>Key Components:</strong> A dedicated tasks module to process background jobs and manage complex queries efficiently.</p>
+      <p><strong>Benefits:</strong> Optimizes performance for high-load enterprise applications and improves scalability.</p>
       <button class="toggle-btn">Hide Code</button>
       <div class="code-block-container">
         <pre class="code-block">
@@ -441,18 +474,18 @@ async_rag/
       </div>
       <p><strong>Features:</strong></p>
       <ul>
-        <li>Uses Celery to handle asynchronous task processing.</li>
-        <li>Efficiently manages long-running tasks (e.g., complex query processing, background vector updates).</li>
-        <li>Optimizes system responsiveness for high-load enterprise applications.</li>
+        <li>Asynchronous task processing using Celery.</li>
+        <li>Handles complex, long-running operations efficiently.</li>
       </ul>
     </section>
     
-    <!-- Additional 10 Architectures -->
-    <hr>
-    
     <!-- Architecture 11 -->
+    <hr>
     <section id="arch11" class="architecture-section">
       <h2>Architecture 11: OpenAI + HuggingFace Transformers + Pinecone (Alternative RAG)</h2>
+      <p><strong>Overview:</strong> Uses HuggingFace Transformers as an alternative text generation engine integrated with Pinecone for vector storage.</p>
+      <p><strong>Key Components:</strong> A dedicated module for HuggingFace API interactions and seamless integration with existing components.</p>
+      <p><strong>Benefits:</strong> Offers flexibility in choosing the best AI model for your needs and can serve as a cost-effective alternative.</p>
       <button class="toggle-btn">Hide Code</button>
       <div class="code-block-container">
         <pre class="code-block">
@@ -479,16 +512,18 @@ alt_rag/
       </div>
       <p><strong>Features:</strong></p>
       <ul>
-        <li>Uses HuggingFace Transformers as an alternative to OpenAI for text generation.</li>
-        <li>Integrates with Pinecone for vector storage and retrieval.</li>
+        <li>Alternative text generation with HuggingFace Transformers.</li>
+        <li>Seamless integration with Pinecone for vector storage.</li>
       </ul>
     </section>
     
-    <hr>
-    
     <!-- Architecture 12 -->
+    <hr>
     <section id="arch12" class="architecture-section">
       <h2>Architecture 12: OpenAI + Redis Cache + LangChain + Pinecone (Hybrid Caching RAG)</h2>
+      <p><strong>Overview:</strong> Blends caching with advanced conversational logic by integrating Redis and LangChain into the RAG pipeline.</p>
+      <p><strong>Key Components:</strong> Redis for caching, LangChain for managing dialogue, and Pinecone for vector storage.</p>
+      <p><strong>Benefits:</strong> Offers enhanced performance and scalability while maintaining conversational context.</p>
       <button class="toggle-btn">Hide Code</button>
       <div class="code-block-container">
         <pre class="code-block">
@@ -515,16 +550,18 @@ hybrid_cache_rag/
       </div>
       <p><strong>Features:</strong></p>
       <ul>
-        <li>Combines caching via Redis with LangChain for enhanced conversation chaining.</li>
-        <li>Provides a hybrid RAG pipeline optimized for performance.</li>
+        <li>Hybrid approach with caching to improve speed.</li>
+        <li>Maintains conversation context with LangChain.</li>
       </ul>
     </section>
     
-    <hr>
-    
     <!-- Architecture 13 -->
+    <hr>
     <section id="arch13" class="architecture-section">
       <h2>Architecture 13: OpenAI + Custom ML Model + Pinecone (Custom RAG)</h2>
+      <p><strong>Overview:</strong> Tailors the RAG pipeline with a custom ML model designed for domain-specific tasks.</p>
+      <p><strong>Key Components:</strong> Custom ML model module alongside OpenAI API and Pinecone for enhanced retrieval.</p>
+      <p><strong>Benefits:</strong> Delivers more relevant responses for specialized applications.</p>
       <button class="toggle-btn">Hide Code</button>
       <div class="code-block-container">
         <pre class="code-block">
@@ -550,16 +587,18 @@ custom_rag/
       </div>
       <p><strong>Features:</strong></p>
       <ul>
-        <li>Integrates a custom ML model for domain-specific tasks alongside OpenAI completions.</li>
-        <li>Utilizes Pinecone for vector search and storage.</li>
+        <li>Custom ML integration for specialized responses.</li>
+        <li>Enhanced retrieval using domain-specific models.</li>
       </ul>
     </section>
     
-    <hr>
-    
     <!-- Architecture 14 -->
+    <hr>
     <section id="arch14" class="architecture-section">
       <h2>Architecture 14: OpenAI + Vector Search + Document QA (RAG + QA)</h2>
+      <p><strong>Overview:</strong> Combines RAG with document-based question answering for deep data exploration.</p>
+      <p><strong>Key Components:</strong> A QA engine alongside vector search and OpenAI completions.</p>
+      <p><strong>Benefits:</strong> Enables precise document retrieval and in-depth data analysis.</p>
       <button class="toggle-btn">Hide Code</button>
       <div class="code-block-container">
         <pre class="code-block">
@@ -585,16 +624,18 @@ qa_rag/
       </div>
       <p><strong>Features:</strong></p>
       <ul>
-        <li>Adds document-based question answering capabilities to the RAG pipeline.</li>
-        <li>Leverages OpenAI for text generation and vector search for data retrieval.</li>
+        <li>Document QA capabilities combined with RAG.</li>
+        <li>Enhanced retrieval and precise data analysis.</li>
       </ul>
     </section>
     
-    <hr>
-    
     <!-- Architecture 15 -->
+    <hr>
     <section id="arch15" class="architecture-section">
       <h2>Architecture 15: Multi-Language RAG with OpenAI and DeepL Integration</h2>
+      <p><strong>Overview:</strong> Supports internationalization by integrating DeepL translation services with OpenAI and Pinecone.</p>
+      <p><strong>Key Components:</strong> DeepL API module for language translation and multi-language support.</p>
+      <p><strong>Benefits:</strong> Enables robust multi-language interactions for a global audience.</p>
       <button class="toggle-btn">Hide Code</button>
       <div class="code-block-container">
         <pre class="code-block">
@@ -621,16 +662,18 @@ multilang_rag/
       </div>
       <p><strong>Features:</strong></p>
       <ul>
-        <li>Supports multi-language processing by integrating DeepL for translation.</li>
-        <li>Combines OpenAI and Pinecone for an international RAG pipeline.</li>
+        <li>Multi-language support using DeepL.</li>
+        <li>Integrates with existing RAG pipeline for global deployment.</li>
       </ul>
     </section>
     
-    <hr>
-    
     <!-- Architecture 16 -->
+    <hr>
     <section id="arch16" class="architecture-section">
       <h2>Architecture 16: OpenAI + LangChain + Custom Retrieval + Pinecone (Smart RAG)</h2>
+      <p><strong>Overview:</strong> Enhances RAG with custom retrieval logic that is tailored to specific domains using LangChain.</p>
+      <p><strong>Key Components:</strong> A custom retrieval module integrated with LangChain for contextual data fetching.</p>
+      <p><strong>Benefits:</strong> Provides smart, domain-specific data retrieval for improved response relevance.</p>
       <button class="toggle-btn">Hide Code</button>
       <div class="code-block-container">
         <pre class="code-block">
@@ -657,16 +700,18 @@ smart_rag/
       </div>
       <p><strong>Features:</strong></p>
       <ul>
-        <li>Incorporates custom retrieval logic with LangChain and Pinecone.</li>
-        <li>Enhances conversational search with smart, domain-specific data retrieval.</li>
+        <li>Smart retrieval mechanisms for domain-specific responses.</li>
+        <li>Integrates custom logic with standard RAG components.</li>
       </ul>
     </section>
     
-    <hr>
-    
     <!-- Architecture 17 -->
+    <hr>
     <section id="arch17" class="architecture-section">
       <h2>Architecture 17: Enterprise RAG with Docker &amp; Kubernetes Integration</h2>
+      <p><strong>Overview:</strong> A containerized RAG solution using Docker, orchestrated with Kubernetes, for enterprise deployment.</p>
+      <p><strong>Key Components:</strong> Dockerfiles, docker-compose, and Kubernetes manifests integrated with the RAG pipeline.</p>
+      <p><strong>Benefits:</strong> Enables seamless scaling and deployment in cloud environments.</p>
       <button class="toggle-btn">Hide Code</button>
       <div class="code-block-container">
         <pre class="code-block">
@@ -696,16 +741,18 @@ enterprise_rag_docker/
       </div>
       <p><strong>Features:</strong></p>
       <ul>
-        <li>Enterprise-level RAG pipeline deployed via Docker and orchestrated with Kubernetes.</li>
-        <li>Includes SQL-based data retrieval and analytics for monitoring.</li>
+        <li>Containerized deployment with Docker and Kubernetes orchestration.</li>
+        <li>Enterprise-grade scalability and monitoring.</li>
       </ul>
     </section>
     
-    <hr>
-    
     <!-- Architecture 18 -->
+    <hr>
     <section id="arch18" class="architecture-section">
       <h2>Architecture 18: OpenAI + AWS S3 + Pinecone for Data-Driven RAG</h2>
+      <p><strong>Overview:</strong> Integrates AWS S3 for scalable data storage into the RAG pipeline, making it data-driven.</p>
+      <p><strong>Key Components:</strong> S3 handler module for data management and integration with OpenAI and Pinecone.</p>
+      <p><strong>Benefits:</strong> Offers scalability and robust data handling for large datasets.</p>
       <button class="toggle-btn">Hide Code</button>
       <div class="code-block-container">
         <pre class="code-block">
@@ -732,16 +779,18 @@ aws_rag/
       </div>
       <p><strong>Features:</strong></p>
       <ul>
-        <li>Integrates AWS S3 for scalable data storage.</li>
-        <li>Provides data-driven RAG solutions leveraging OpenAI and Pinecone.</li>
+        <li>Scalable data storage via AWS S3.</li>
+        <li>Data-driven responses integrated into the RAG pipeline.</li>
       </ul>
     </section>
     
-    <hr>
-    
     <!-- Architecture 19 -->
+    <hr>
     <section id="arch19" class="architecture-section">
       <h2>Architecture 19: OpenAI + LangChain + Firebase Integration (Realtime RAG)</h2>
+      <p><strong>Overview:</strong> Leverages Firebase for realtime data updates alongside a RAG pipeline managed by LangChain and Pinecone.</p>
+      <p><strong>Key Components:</strong> Firebase handler for realtime chat analytics, integrated with traditional RAG components.</p>
+      <p><strong>Benefits:</strong> Enables realtime interactions and data updates for responsive chatbot experiences.</p>
       <button class="toggle-btn">Hide Code</button>
       <div class="code-block-container">
         <pre class="code-block">
@@ -768,16 +817,18 @@ firebase_rag/
       </div>
       <p><strong>Features:</strong></p>
       <ul>
-        <li>Uses Firebase for realtime data updates and chat analytics.</li>
-        <li>Combines LangChain for conversation management with Pinecone for retrieval.</li>
+        <li>Realtime data updates using Firebase.</li>
+        <li>Integrates conversation management with realtime analytics.</li>
       </ul>
     </section>
     
-    <hr>
-    
     <!-- Architecture 20 -->
+    <hr>
     <section id="arch20" class="architecture-section">
       <h2>Architecture 20: Modular RAG with Plugin-Based Extensibility</h2>
+      <p><strong>Overview:</strong> A highly modular RAG system that supports a plugin-based architecture for easy extensibility and customization.</p>
+      <p><strong>Key Components:</strong> A dedicated plugins directory and modular code structure allowing for dynamic loading of new AI modules.</p>
+      <p><strong>Benefits:</strong> Facilitates rapid experimentation and deployment of new features, making the system highly adaptable.</p>
       <button class="toggle-btn">Hide Code</button>
       <div class="code-block-container">
         <pre class="code-block">
@@ -807,14 +858,18 @@ modular_rag/
       </div>
       <p><strong>Features:</strong></p>
       <ul>
-        <li>Built with a plugin architecture to allow modular extension and customization of the RAG pipeline.</li>
-        <li>Enables easy integration of new AI modules and data retrieval strategies.</li>
+        <li>Modular architecture that supports plugins for easy extension.</li>
+        <li>Customizable and adaptable to new requirements.</li>
       </ul>
     </section>
     
     <!-- Architecture 21: Property Insights Chatbot with AI Analytics -->
+    <hr>
     <section id="arch21" class="architecture-section">
       <h2>Architecture 21: Property Insights Chatbot with AI Analytics</h2>
+      <p><strong>Overview:</strong> Designed specifically for property management, this chatbot leverages AI analytics to extract actionable insights from property data.</p>
+      <p><strong>Key Components:</strong> Modules for property data extraction, AI-based trend analysis, and interactive chat interfaces.</p>
+      <p><strong>Benefits:</strong> Provides real-time market trends and insights to support decision-making in property management.</p>
       <button class="toggle-btn">Hide Code</button>
       <div class="code-block-container">
         <pre class="code-block">
@@ -839,17 +894,18 @@ property_insights/
       </div>
       <p><strong>Features:</strong></p>
       <ul>
-        <li>Integrates property listing data with AI analytics to forecast market trends.</li>
-        <li>Provides actionable property insights for informed management decisions.</li>
-        <li>Supports real-time updates and historical trend analysis.</li>
+        <li>Forecasts market trends based on property data.</li>
+        <li>Enables data-driven decision-making for property management.</li>
       </ul>
     </section>
     
-    <hr>
-    
     <!-- Architecture 22: Lease Management Chatbot with Document Parsing -->
+    <hr>
     <section id="arch22" class="architecture-section">
       <h2>Architecture 22: Lease Management Chatbot with Document Parsing</h2>
+      <p><strong>Overview:</strong> Automates the extraction of key details from lease documents using AI-driven parsing techniques.</p>
+      <p><strong>Key Components:</strong> Document extraction modules, lease parser, and integration with chatbot conversation history.</p>
+      <p><strong>Benefits:</strong> Streamlines lease renewals and ensures accurate record keeping.</p>
       <button class="toggle-btn">Hide Code</button>
       <div class="code-block-container">
         <pre class="code-block">
@@ -874,17 +930,18 @@ lease_management/
       </div>
       <p><strong>Features:</strong></p>
       <ul>
-        <li>Automates parsing and management of lease documents.</li>
-        <li>Improves accuracy in lease data extraction using AI.</li>
-        <li>Streamlines lease renewal and management workflows.</li>
+        <li>Automates lease document parsing and data extraction.</li>
+        <li>Reduces manual data entry and improves accuracy.</li>
       </ul>
     </section>
     
-    <hr>
-    
     <!-- Architecture 23: Maintenance Request & Scheduling Chatbot -->
+    <hr>
     <section id="arch23" class="architecture-section">
       <h2>Architecture 23: Maintenance Request &amp; Scheduling Chatbot</h2>
+      <p><strong>Overview:</strong> Streamlines the process of maintenance request submissions and scheduling repairs or inspections.</p>
+      <p><strong>Key Components:</strong> Maintenance history, scheduling modules, and an interactive tenant interface.</p>
+      <p><strong>Benefits:</strong> Improves response times and operational efficiency in property maintenance.</p>
       <button class="toggle-btn">Hide Code</button>
       <div class="code-block-container">
         <pre class="code-block">
@@ -909,17 +966,18 @@ maintenance_chatbot/
       </div>
       <p><strong>Features:</strong></p>
       <ul>
-        <li>Enables tenants to submit maintenance requests via chatbot.</li>
-        <li>Integrates scheduling to automatically assign work orders.</li>
-        <li>Improves response times and streamlines property maintenance.</li>
+        <li>Enables tenants to submit maintenance requests seamlessly.</li>
+        <li>Integrates scheduling to automate work order assignment.</li>
       </ul>
     </section>
     
-    <hr>
-    
     <!-- Architecture 24: Tenant Communication & Screening Chatbot -->
+    <hr>
     <section id="arch24" class="architecture-section">
       <h2>Architecture 24: Tenant Communication &amp; Screening Chatbot</h2>
+      <p><strong>Overview:</strong> Improves tenant interactions by automating initial inquiries, screening, and communication.</p>
+      <p><strong>Key Components:</strong> Tenant data modules, screening algorithms, and communication handlers.</p>
+      <p><strong>Benefits:</strong> Speeds up the leasing process and enhances tenant engagement.</p>
       <button class="toggle-btn">Hide Code</button>
       <div class="code-block-container">
         <pre class="code-block">
@@ -944,17 +1002,18 @@ tenant_chatbot/
       </div>
       <p><strong>Features:</strong></p>
       <ul>
-        <li>Facilitates tenant screening and communication via AI chatbot.</li>
-        <li>Automates initial tenant inquiries and background checks.</li>
-        <li>Improves engagement and speeds up the leasing process.</li>
+        <li>Automates tenant screening and follow-up communication.</li>
+        <li>Integrates with property data to provide tailored responses.</li>
       </ul>
     </section>
     
-    <hr>
-    
     <!-- Architecture 25: Virtual Property Tour Chatbot -->
+    <hr>
     <section id="arch25" class="architecture-section">
       <h2>Architecture 25: Virtual Property Tour Chatbot</h2>
+      <p><strong>Overview:</strong> Offers interactive virtual tours of properties using multimedia elements and dynamic content.</p>
+      <p><strong>Key Components:</strong> 360° tour modules, multimedia integration, and dynamic content delivery.</p>
+      <p><strong>Benefits:</strong> Enhances user engagement by providing immersive property tour experiences.</p>
       <button class="toggle-btn">Hide Code</button>
       <div class="code-block-container">
         <pre class="code-block">
@@ -978,17 +1037,18 @@ virtual_tour/
       </div>
       <p><strong>Features:</strong></p>
       <ul>
-        <li>Provides interactive virtual tours of properties using multimedia integrations.</li>
-        <li>Enhances user engagement with 360° property views and dynamic content.</li>
-        <li>Seamlessly integrates with property listing data for up-to-date tours.</li>
+        <li>Interactive, multimedia-driven virtual tours.</li>
+        <li>Dynamic content integration with property listings.</li>
       </ul>
     </section>
     
-    <hr>
-    
     <!-- Architecture 26: Property Investment Analysis Chatbot -->
+    <hr>
     <section id="arch26" class="architecture-section">
       <h2>Architecture 26: Property Investment Analysis Chatbot</h2>
+      <p><strong>Overview:</strong> Analyzes property investment data using AI to generate insightful forecasts for investors.</p>
+      <p><strong>Key Components:</strong> Investment analysis models, market data integration, and reporting modules.</p>
+      <p><strong>Benefits:</strong> Assists investors in making informed decisions with comprehensive market insights.</p>
       <button class="toggle-btn">Hide Code</button>
       <div class="code-block-container">
         <pre class="code-block">
@@ -1013,17 +1073,18 @@ investment_rag/
       </div>
       <p><strong>Features:</strong></p>
       <ul>
-        <li>Analyzes property investment data using AI-driven models.</li>
-        <li>Provides actionable insights and forecasts for investors.</li>
-        <li>Integrates historical market data for comprehensive analysis.</li>
+        <li>AI-driven analysis of investment opportunities.</li>
+        <li>Forecasts based on historical market trends.</li>
       </ul>
     </section>
     
-    <hr>
-    
     <!-- Architecture 27: Rent Optimization and Market Analysis Chatbot -->
+    <hr>
     <section id="arch27" class="architecture-section">
       <h2>Architecture 27: Rent Optimization and Market Analysis Chatbot</h2>
+      <p><strong>Overview:</strong> Optimizes rental pricing using market analytics and AI-driven insights.</p>
+      <p><strong>Key Components:</strong> Market analysis algorithms, rental optimization models, and real-time data integration.</p>
+      <p><strong>Benefits:</strong> Helps maximize revenue and occupancy rates by adapting to market conditions.</p>
       <button class="toggle-btn">Hide Code</button>
       <div class="code-block-container">
         <pre class="code-block">
@@ -1048,17 +1109,18 @@ rent_optimization/
       </div>
       <p><strong>Features:</strong></p>
       <ul>
-        <li>Optimizes rental pricing through AI-driven market analysis.</li>
-        <li>Provides real-time insights on rental trends and demand.</li>
-        <li>Helps property managers maximize revenue and occupancy rates.</li>
+        <li>Real-time market trend analysis.</li>
+        <li>Optimizes rent pricing for property managers.</li>
       </ul>
     </section>
     
+    <!-- Architecture 28: Smart Home Integration &amp; IoT Chatbot -->
     <hr>
-    
-    <!-- Architecture 28: Smart Home Integration & IoT Chatbot -->
     <section id="arch28" class="architecture-section">
       <h2>Architecture 28: Smart Home Integration &amp; IoT Chatbot</h2>
+      <p><strong>Overview:</strong> Integrates smart home devices and IoT data to allow remote property management via chatbot.</p>
+      <p><strong>Key Components:</strong> IoT integration modules, smart home data processing, and responsive control interfaces.</p>
+      <p><strong>Benefits:</strong> Enhances tenant experience with intelligent automation and remote control features.</p>
       <button class="toggle-btn">Hide Code</button>
       <div class="code-block-container">
         <pre class="code-block">
@@ -1083,17 +1145,18 @@ smart_home_chatbot/
       </div>
       <p><strong>Features:</strong></p>
       <ul>
-        <li>Integrates smart home devices and IoT data with chatbot interactions.</li>
-        <li>Facilitates remote control and monitoring of property amenities.</li>
-        <li>Enhances tenant experience with intelligent home automation.</li>
+        <li>Remote monitoring and control of property amenities.</li>
+        <li>Integrates IoT devices seamlessly into chatbot interactions.</li>
       </ul>
     </section>
     
-    <hr>
-    
     <!-- Architecture 29: Property Management CRM Chatbot -->
+    <hr>
     <section id="arch29" class="architecture-section">
       <h2>Architecture 29: Property Management CRM Chatbot</h2>
+      <p><strong>Overview:</strong> Centralizes property management data by integrating CRM functionalities into the chatbot system.</p>
+      <p><strong>Key Components:</strong> CRM integration modules, property record management, and communication automation.</p>
+      <p><strong>Benefits:</strong> Streamlines tenant communications and property record-keeping in a unified platform.</p>
       <button class="toggle-btn">Hide Code</button>
       <div class="code-block-container">
         <pre class="code-block">
@@ -1118,17 +1181,18 @@ property_crm/
       </div>
       <p><strong>Features:</strong></p>
       <ul>
-        <li>Integrates CRM functionalities for property management.</li>
-        <li>Centralizes tenant data and property records.</li>
-        <li>Automates routine communications and follow-ups.</li>
+        <li>Centralized CRM integration for property management.</li>
+        <li>Automates tenant follow-ups and record updates.</li>
       </ul>
     </section>
     
-    <hr>
-    
     <!-- Architecture 30: AI-based Property Portfolio Management Chatbot -->
+    <hr>
     <section id="arch30" class="architecture-section">
       <h2>Architecture 30: AI-based Property Portfolio Management Chatbot</h2>
+      <p><strong>Overview:</strong> Uses AI to analyze and manage a diverse property portfolio, providing detailed performance reports.</p>
+      <p><strong>Key Components:</strong> Portfolio analysis modules, property data aggregation, and AI-driven performance tracking.</p>
+      <p><strong>Benefits:</strong> Supports data-driven decision-making for property acquisitions, divestitures, and overall management.</p>
       <button class="toggle-btn">Hide Code</button>
       <div class="code-block-container">
         <pre class="code-block">
@@ -1153,9 +1217,8 @@ portfolio_management/
       </div>
       <p><strong>Features:</strong></p>
       <ul>
-        <li>Manages a diverse property portfolio using AI-driven insights.</li>
-        <li>Automates reporting and performance tracking for asset managers.</li>
-        <li>Supports data-driven decisions for property acquisitions and divestitures.</li>
+        <li>AI-driven analysis of property portfolios.</li>
+        <li>Automates performance reporting and trend analysis.</li>
       </ul>
     </section>
     
