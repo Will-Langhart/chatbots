@@ -34,3 +34,19 @@ source venv/bin/activate
 # (Optional) Install the required dependencies
 pip install -r requirements.txt
 ```
+To run your Flask app, try the following steps:
+	1.	Ensure your virtual environment is active.
+(It looks like it is, as your prompt shows (venv).)
+	2.	Set the Flask app environment variable (if needed):
+ ```bash
+export FLASK_APP=app.py
+```
+  3. Run the Flask application.
+You can either run it using the built-in Flask CLI:
+ ```bash
+flask run
+```
+or run it directly with Python (if your app.py has the appropriate main block):
+ ```bash
+python app.py
+ ```
